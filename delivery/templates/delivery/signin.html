@@ -13,9 +13,13 @@
       <h2>Sign In</h2>
       <form method="POST" action="{% url 'handle_login' %}">
          {% csrf_token %}
+         <div class="input-group">
           <label for="username">Username</label>
           <input type="text" name="username" required>
-          <br><br>
+        </div>
+        <div class="input-group">
+
+          <br>
           <label for="password">Password</label>
           <input type="password" name="password" required>
           <br><br>

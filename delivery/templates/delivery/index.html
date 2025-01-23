@@ -1,13 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'delivery/css/styles.css' %}">
     <title>   
         <h1>index</h1>
     </title>
 </head>
-<body>
-        <h1>Welcome to Our Website</h1>
+<body class="index-page" style="background-image: url('{% static "C:\Visual_Studio\Django_Learn\meal_mate\delivery\static\delivery\images\background.png" %}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+        <h1>Welcome Annapurna for delicious Food</h1>
         <div class="button-group">
           <a href="signin/">Sign In</a>
           <a href="signup/">Sign Up</a>

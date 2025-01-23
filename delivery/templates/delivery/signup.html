@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'delivery/css/styles.css' %}">
     <title>
         <h1>SignUp</h1>
     </title>
@@ -11,21 +13,37 @@
       <h2>Register</h2>
       <form method="POST" action="{% url 'handle_signup' %}">
         {% csrf_token %}
+        <div class="input-group">
           <label for="username">Username</label>
           <input type="text" name="username" required>
-          <br><br>
+        </div>
+        <div class="input-group">
+          <br>
           <label for="password">Password</label>
           <input type="password"  name="password" required>
-          <br><br>
+        </div>
+        <div class="input-group">
+          <br>
           <label >Email</label>
-          <input type="email" name="email_address" required>
-          <br><br>
+          <input type="email" name="email" required>
+        </div>
+        <div class="input-group">
+
+          <br>
           <label >Mobile</label>
           <input type="text"  name="mobile" required>
-          <br><br>
+        </div>
+        <div class="input-group">
+
+          <br>
           <label>Address</label>
           <textarea name = "address"></textarea>
+        </div>
+        <div class="input-group">
+
+          <br>
         <button type="submit">Sign Up</button>
+        </div>
       </form>
     </div>
   </body>
